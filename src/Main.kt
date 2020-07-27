@@ -9,4 +9,7 @@ fun main(){
     val person3 = User("Robi", "Purba", 20)
     person3.name = "Ahmad Santoso"
     println("Nama saya ${person3.name} umur ${person3.age}")
+    // Teacher Object
+    val teacher1 = Teacher("Pak", "Toton", 20, "Pengantar sistem informasi")
+    println("Nama: ${teacher1.name}\nMatkul: ${teacher1.subject} ")
 }

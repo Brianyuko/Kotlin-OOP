@@ -1,7 +1,9 @@
 // Object Oriented Programming
 
 // class NameClass (Constructor)
-class User(var firstName: String, var lastName: String, var age: Int){
+//By default, Kotlin classes are final: they can’t be inherited.
+// To make a class inheritable, mark it with the open keyword.
+open class User(var firstName: String, var lastName: String, var age: Int){
     //var name: String = name
     //var age: Int = age
 
@@ -23,4 +25,8 @@ class User(var firstName: String, var lastName: String, var age: Int){
             println("umur tidak boleh kosong")
         }
     }
+}
+// Inheritance
+class Teacher(firstName: String, lastName: String, age: Int, var subject: String): User(firstName, lastName, age){
+
 }

@@ -12,4 +12,7 @@ fun main(){
     // Teacher Object
     val teacher1 = Teacher("Pak", "Toton", 20, "Pengantar sistem informasi")
     println("Nama: ${teacher1.name}\nMatkul: ${teacher1.subject} ")
+    teacher1.breakTime()
+    val student1 = Student("Ahmad", "Bayu", 19, "Semester 3")
+    student1.breakTime()
 }

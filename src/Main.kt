@@ -14,5 +14,6 @@ fun main(){
     println("Nama: ${teacher1.name}\nMatkul: ${teacher1.subject} ")
     teacher1.breakTime()
     val student1 = Student("Ahmad", "Bayu", 19, "Semester 3")
+    println("Nama: ${teacher1.name}\nMatkul: ${student1.grade} ")
     student1.breakTime()
 }

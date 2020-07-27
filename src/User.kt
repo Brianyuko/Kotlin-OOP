@@ -11,6 +11,13 @@ open class User(var firstName: String, var lastName: String, var age: Int){
 //    constructor(name: String, age: Int, lastName: String): this(name, age){
 //        this.name = name + lastName
 //    }
+    fun absen(){
+        println("$name sudah absen")
+    }
+    // Inherit Function
+    open fun breakTime(){
+        println("$name sedang istirahat")
+    }
     var name: String
         get() = firstName +" "+ lastName
         set(value) {
@@ -28,5 +35,13 @@ open class User(var firstName: String, var lastName: String, var age: Int){
 }
 // Inheritance
 class Teacher(firstName: String, lastName: String, age: Int, var subject: String): User(firstName, lastName, age){
+    override fun breakTime(){
+        // Call function in superclass
+        super.breakTime()
+        println("$name istirahat di ruang dosen")
+        
+    }
+}
+class Student(firstName: String, lastName: String, age: Int, var grade: String): User(firstName, lastName, age){
 
 }

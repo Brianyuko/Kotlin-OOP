@@ -11,9 +11,9 @@ open class User(var firstName: String, var lastName: String, var age: Int){
 //    constructor(name: String, age: Int, lastName: String): this(name, age){
 //        this.name = name + lastName
 //    }
-    fun absen(){
-        println("$name sudah absen")
-    }
+
+    private val parentName = "Namira"
+    protected val id: Int = 122
     // Inherit Function
     open fun breakTime(){
         println("$name sedang istirahat")
@@ -29,6 +29,7 @@ open class User(var firstName: String, var lastName: String, var age: Int){
     //    A class file can have one or more init blocks executing in serie
     init {
         if (age == 0){
+            println("parent name: $parentName")
             println("umur tidak boleh kosong")
         }
     }
@@ -38,10 +39,10 @@ class Teacher(firstName: String, lastName: String, age: Int, var subject: String
     override fun breakTime(){
         // Call function in superclass
         super.breakTime()
-        println("$name istirahat di ruang dosen")
+        // id,  visibility protected
+        println("$name id $id istirahat di ruang dosen")
+        // println("Parent name : $parentName") -> error, bcs private
         
     }
 }
-class Student(firstName: String, lastName: String, age: Int, var grade: String): User(firstName, lastName, age){
-
-}
+class Student(firstName: String, lastName: String, age: Int, var grade: String): User(firstName, lastName, age)

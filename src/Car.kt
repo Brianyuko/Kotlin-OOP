@@ -5,7 +5,7 @@ object Car {
     }
 }
 
-class MotorCycle{
+open class MotorCycle{
     companion object Testing{
         fun jump(){
             println("Jumping...")
@@ -14,6 +14,9 @@ class MotorCycle{
 //    fun flying(){
 //        println("is flying...")
 //    }
+    open fun riding(){
+        println("Riding...")
+    }
 }
 
 fun main(){
@@ -25,4 +28,12 @@ fun main(){
 
     // Error
     // MotorCycle.flying()
+
+    // Object Expression
+    val person = object: MotorCycle(){
+        override fun riding() {
+            println("Riding Override...")
+        }
+    }
+    person.riding()
 }

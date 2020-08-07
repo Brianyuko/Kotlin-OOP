@@ -5,7 +5,24 @@ object Car {
     }
 }
 
+class MotorCycle{
+    companion object Testing{
+        fun jump(){
+            println("Jumping...")
+        }
+    }
+//    fun flying(){
+//        println("is flying...")
+//    }
+}
+
 fun main(){
     // Object Declarations
     Car.printHeight()
+
+    //Companion Object
+    MotorCycle.jump()
+
+    // Error
+    // MotorCycle.flying()
 }

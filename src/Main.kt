@@ -27,4 +27,12 @@ fun main(){
     // Extension function Class
     val a = People()
     println(a.cekAngka(10))
+
+    // Infix Function
+    infix fun String.addText(text: String) : String{
+        return "$text : $this"
+    }
+    val testing1 = "214314"
+    // Infix
+    println(testing1 addText "Token")
 }

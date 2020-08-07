@@ -16,4 +16,15 @@ fun main(){
     val student1 = Student("Ahmad", "Bayu", 19, "Semester 3")
     println("Nama: ${teacher1.name}\nMatkul: ${student1.grade} ")
     student1.breakTime()
+
+    // Extension Function
+    fun String.addToken() : String {
+        return "Bearer $this"
+    }
+    val testing = "this is this"
+    println(testing.addToken())
+
+    // Extension function Class
+    val a = People()
+    println(a.cekAngka(10))
 }
